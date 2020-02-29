@@ -8,10 +8,13 @@ public class GameController : MonoBehaviour
     public Character[] enemyCharacters;
     Character currentTarget;
     bool waitingPlayerInput;
+    ResultOfLevelPage resultOfLevelPage;
+    ResultOfLevelSound resultOfLevelSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        resultOfLevelPage = FindObjectOfType<ResultOfLevelPage>();
         StartCoroutine(GameLoop());
     }
 
@@ -63,11 +66,15 @@ public class GameController : MonoBehaviour
     void PlayerWon()
     {
         Debug.Log("Player won");
+        resultOfLevelPage.TheEndOfLevel("Player won", true);
+        resultOfLevelSound.PlayVictoryClip();
     }
 
     void PlayerLost()
     {
         Debug.Log("Player lost");
+        resultOfLevelPage.TheEndOfLevel("Player lost", false);
+        resultOfLevelSound.PlayDefeatClip();
     }
 
     Character FirstAliveCharacter(Character[] characters)

@@ -386,6 +386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitClip: {fileID: 8300000, guid: 45443a33689f4f04c804293db72b978c, type: 3}
+  ShootHitClip: {fileID: 8300000, guid: ae63fc2598dac794f8afa2b355992339, type: 3}
+  HandHitClip: {fileID: 8300000, guid: 65e955753ec98f048a8edac491403be9, type: 3}
+  TakeDamageShortClip: {fileID: 8300000, guid: 20b377534885f8a4f8ef588309f51620, type: 3}
+  TakeDamageLongClip: {fileID: 8300000, guid: 4e5603af51649224db3b505842720b6a, type: 3}
+  DeathClip: {fileID: 8300000, guid: 6789299ea9ce460479ee356feb633e6a, type: 3}
 --- !u!1001 &1514452082050995385
 PrefabInstance:
   m_ObjectHideFlags: 0

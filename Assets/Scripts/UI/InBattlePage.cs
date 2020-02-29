@@ -7,6 +7,9 @@ public class InBattlePage : MonoBehaviour
     public Button AttackButton;
     public Button SwitchButton;
 
+    void Start()
+    {
+    }
     private void Awake()
     {
         AttackButton.onClick.AddListener(OnAttackButtonClick);
@@ -17,4 +20,5 @@ public class InBattlePage : MonoBehaviour
     {
         Controller.PlayerMove();
     }
+  
 }

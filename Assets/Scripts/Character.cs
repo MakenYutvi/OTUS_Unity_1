@@ -144,22 +144,51 @@ public class Character : MonoBehaviour
     public void Die()
     {
         animator.SetTrigger("died");
+        Canvas canvasCharacter = GetComponentInChildren<Canvas>();
+        canvasCharacter.gameObject.SetActive(false);
         SetState(State.Dead);
     }
 
     public void DoDamageToTarget()
     {
+        HitSoundPlayer hitSoundPlayer = target.GetComponent<HitSoundPlayer>();
+        HitSoundPlayer getHitSoundPlayer = GetComponentInChildren<HitSoundPlayer>();
+
+        getHitSoundPlayer.PlayTakeDamageShortClip();
+        switch (weapon)
+        {
+            case Weapon.Pistol:
+                ShootEffectAnimation shootEffect = GetComponentInChildren<ShootEffectAnimation>();
+                shootEffect.PlayEffect();
+                hitSoundPlayer.PlayShootHitClip();
+
+                break;
+            case Weapon.Fist:
+                hitSoundPlayer.PlayHandHitClip();
+                break;
+            case Weapon.Bat:
+                hitSoundPlayer.PlayHitClip();
+                break;
+
+
+            default:
+                break;
+
+        }
         HitEffectAnimation hitEffect = target.GetComponent<HitEffectAnimation>();
         hitEffect.PlayEffect();
 
-        HitSoundPlayer hitSoundPlayer = target.GetComponent<HitSoundPlayer>();
-        hitSoundPlayer.Play();
+        
+        
 
         Health health = target.GetComponent<Health>();
         if (health != null) {
             health.ApplyDamage(damage);
             if (health.current <= 0.0f)
+            {
+                getHitSoundPlayer.PlayDeathClip();
                 target.Die();
+            }
         }
     }
 }
