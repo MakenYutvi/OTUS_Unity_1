@@ -7,6 +7,7 @@ public class HealthIndicator : MonoBehaviour
 {
     public TextMeshProUGUI textField;
     Health health;
+    BalanceOfPerson balanceOfPerson;
     float displayedHealth;
 
     // Start is called before the first frame update

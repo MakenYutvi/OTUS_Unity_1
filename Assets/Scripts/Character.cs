@@ -27,11 +27,12 @@ public class Character : MonoBehaviour
     public float distanceFromEnemy;
     public Character target;
     public Weapon weapon;
-    public float damage;
+    private float damage;
     Animator animator;
     Vector3 originalPosition;
     Quaternion originalRotation;
     State state = State.Idle;
+    public BalanceOfPerson balanceOfPersonSO;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class Character : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+        damage = balanceOfPersonSO.Damage;
     }
 
     public void AttackEnemy()
@@ -178,11 +180,9 @@ public class Character : MonoBehaviour
         HitEffectAnimation hitEffect = target.GetComponent<HitEffectAnimation>();
         hitEffect.PlayEffect();
 
-        
-        
-
         Health health = target.GetComponent<Health>();
-        if (health != null) {
+        if (health != null)
+        {
             health.ApplyDamage(damage);
             if (health.current <= 0.0f)
             {
@@ -190,5 +190,6 @@ public class Character : MonoBehaviour
                 target.Die();
             }
         }
+
     }
 }
