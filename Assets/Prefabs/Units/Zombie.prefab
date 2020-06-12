@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 1726428797084884046, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7134354862502786849, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
@@ -97,7 +97,7 @@ PrefabInstance:
     - target: {fileID: 9051640985646818473, guid: 73e1432563d8c1a48839445fb70ed3d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1432563d8c1a48839445fb70ed3d9, type: 3}
@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 31e3044f971f64b4ea948e989a450218, type: 2}
+    - target: {fileID: 13700098, guid: f88c8301226fd194cbbc64e25b20d567, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f88c8301226fd194cbbc64e25b20d567, type: 3}
 --- !u!1 &4022456353391589101 stripped
