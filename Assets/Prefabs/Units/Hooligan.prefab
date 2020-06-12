@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7407112219535181412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492144366031563839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb38613b2823694abc2275a43e85ef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeOfDissolution: 0
+  _Material: {fileID: 0}
 --- !u!114 &6579740517724335022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +110,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e1432563d8c1a48839445fb70ed3d9, type: 3}
+--- !u!1 &7492144366031563839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8005653227702665060, guid: 73e1432563d8c1a48839445fb70ed3d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 639716390544888667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7492144366031563836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8005653227702665063, guid: 73e1432563d8c1a48839445fb70ed3d9,
@@ -161,6 +181,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 31e3044f971f64b4ea948e989a450218, type: 2}
+    - target: {fileID: 13700002, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 878b73982c1c97f4bb8702fe315373b4, type: 2}
+    - target: {fileID: 13700002, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8fd192304df88db499eedb3456dc6d67, type: 2}
+    - target: {fileID: 13700002, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8fd192304df88db499eedb3456dc6d67, type: 2}
+    - target: {fileID: 13700002, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
 --- !u!1 &8993794694277522125 stripped
