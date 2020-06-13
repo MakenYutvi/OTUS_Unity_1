@@ -86,10 +86,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Dissolve_amount: 2.04
     - Vector1_133124DF: 1.9
     - Vector1_36691F0B: 0.5
     - Vector1_461D4964: 0
-    - Vector1_8B6DC28D: 0.75
+    - Vector1_8B6DC28D: 1.48
     - Vector1_D45F34D1: 1
     - _AlphaClip: 0
     - _Blend: 0

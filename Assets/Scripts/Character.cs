@@ -33,6 +33,7 @@ public class Character : MonoBehaviour
     Quaternion originalRotation;
     State state = State.Idle;
     public BalanceOfPerson balanceOfPersonSO;
+    private ShaderDissolution _shaderDissolution;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class Character : MonoBehaviour
         originalPosition = transform.position;
         originalRotation = transform.rotation;
         damage = balanceOfPersonSO.Damage;
+        _shaderDissolution = GetComponentInChildren<ShaderDissolution>();
     }
 
     public void AttackEnemy()
@@ -149,6 +151,7 @@ public class Character : MonoBehaviour
         Canvas canvasCharacter = GetComponentInChildren<Canvas>();
         canvasCharacter.gameObject.SetActive(false);
         SetState(State.Dead);
+        _shaderDissolution.Dissolution();
     }
 
     public void DoDamageToTarget()
