@@ -19,17 +19,17 @@ public class ShaderDissolution : MonoBehaviour
         foreach (MeshRenderer i in _MeshRenderer)
         {
             Debug.Log(i.name);
-            i.material.SetFloat("Dissolve_amount", 2.0f);
+            i.material.SetFloat("Dissolve_amount", 0.0f);
             _stepOfDissoluton = 2.0f / _TimeOfDissolution;
-            _Dissolve_amount = 2.0f;
+            _Dissolve_amount = 0.0f;
         }
         _SkinnedMeshRenderer = GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach (SkinnedMeshRenderer i in _SkinnedMeshRenderer)
         {
             Debug.Log(i.name);
-            i.material.SetFloat("Dissolve_amount", 2.0f);
+            i.material.SetFloat("Dissolve_amount", 0.0f);
             _stepOfDissoluton = 2.0f / _TimeOfDissolution;
-            _Dissolve_amount = 2.0f;
+            _Dissolve_amount = 0.0f;
         }
 
     }
@@ -44,12 +44,12 @@ public class ShaderDissolution : MonoBehaviour
                 if (_TimeOfDissolution > 0)
                 {
                     _TimeOfDissolution -= Time.deltaTime;
-                    _Dissolve_amount = _Dissolve_amount - _Dissolve_amount * _stepOfDissoluton * Time.deltaTime;
+                    _Dissolve_amount = _Dissolve_amount +  _stepOfDissoluton * Time.deltaTime;
                     i.material.SetFloat("Dissolve_amount", _Dissolve_amount);
                 }
                 else
                 {
-                    i.material.SetFloat("Dissolve_amount", 0);
+                    i.material.SetFloat("Dissolve_amount", 2);
                 }
             }
 
@@ -58,12 +58,12 @@ public class ShaderDissolution : MonoBehaviour
                 if (_TimeOfDissolution > 0)
                 {
                     _TimeOfDissolution -= Time.deltaTime;
-                    _Dissolve_amount = _Dissolve_amount - _Dissolve_amount * _stepOfDissoluton * Time.deltaTime;
+                    _Dissolve_amount = _Dissolve_amount + _stepOfDissoluton * Time.deltaTime;
                     i.material.SetFloat("Dissolve_amount", _Dissolve_amount);
                 }
                 else
                 {
-                    i.material.SetFloat("Dissolve_amount", 0);
+                    i.material.SetFloat("Dissolve_amount", 2);
                 }
             }
 
